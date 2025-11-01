@@ -1,0 +1,137 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+    width: 100%;
+    height: 100%;
+  
+    background: linear-gradient(135deg, #002366 0%, #f00000 100%); /* Red Bull Blue + Red gradient */
+    color: white;
+}
+
+a{
+    font-family: 'Montserrat', sans-serif; 
+    text-decoration: none;
+    color: white;
+   
+    transition: 0.3s;
+}
+h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+
+a:hover{
+    color: #fdd835; /* Red Bull yellow accent */
+}
+
+#main{
+    width: 100%;
+    min-height: 100vh;
+    /* background-color replaced by gradient */
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    padding: 0 5vw;
+}
+
+#our{
+    font-size: 2vw;
+    font-family: fontone;
+    font-weight: bold;
+}
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15vh;
+    width: 100%;
+    height: 90vh;
+    padding: 0 15vw;
+    font-family: fontone;
+    font-size: 1.5vw;
+    letter-spacing: 0.1vw;
+    text-align: center;
+}
+
+.dots-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.dot{
+    width: 0.6vw;
+    height: 0.6vw;
+    border-radius: 50%;
+    background-color: #fdd835; /* Yellow accent like Red Bull */
+}
+
+.img-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    /* background-color replaced by gradient */
+}
+
+.img{
+    width: 25vw;
+    height: 50vh;
+    background-image: url('https://i.imgur.com/8FqKj4C.jpg'); /* Full Red Bull cans image */
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.5);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Floating animation for energy feel */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px){
+    .content{
+        font-size: 3vw;
+        padding: 0 5vw;
+    }
+
+    .content h1 {
+        font-size: clamp(1.2rem, 5vw, 1.8rem);
+    }
+    #our{
+        font-size: 4vw;
+    }
+
+    .dot{
+        width: 1vw;
+        height: 1vw;
+    }
+
+    .img{
+        width: 50vw;
+        height: 40vh;
+    }
+}
